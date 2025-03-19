@@ -6,6 +6,7 @@ import Popup from '../Popup';
 
 const afacad = Afacad({
   subsets: ["latin"],
+  preload: false,
 });
 
 const Contacts = () => {

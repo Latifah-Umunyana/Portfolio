@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 const afacad = Afacad({
   subsets: ['latin'],
+  preload: false,
   display: 'swap',
 });
 

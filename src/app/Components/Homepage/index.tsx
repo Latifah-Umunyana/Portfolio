@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const afacad = Afacad({
   subsets: ["latin"],
+  preload: false,
 });
 
 const Homepage = () => {

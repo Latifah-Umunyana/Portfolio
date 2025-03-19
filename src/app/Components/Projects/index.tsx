@@ -1,4 +1,5 @@
 import { Afacad } from "next/font/google";
+import Image from 'next/image';
 
 interface Project {
   name: string;
@@ -12,6 +13,7 @@ interface ProjectCardProps {
 
 const afacad = Afacad({
   subsets: ["latin"],
+  preload: false,
 });
 
 const projects = [
@@ -61,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <div className="aspect-w-4 aspect-h-3">
       <a href={project.link} className="text-blue-600 hover:underline">
-        <img
+        <Image
           src={project.img}
           alt={project.name}
           width={400}

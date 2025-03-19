@@ -3,6 +3,7 @@ import { Afacad } from "next/font/google";
 
 const afacad = Afacad({
   subsets: ["latin"],
+  preload: false,
 });
 
 interface SkillItem {
