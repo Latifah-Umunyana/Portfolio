@@ -18,7 +18,7 @@ const projects = [
   {
     proj: [
       {
-        img: "/images/Themis AI.png",
+        img: "/images/ThemisAI.png",
         name: "Themis AI",
         link: "https://themis-dashboard-one.vercel.app/",
       },
@@ -28,10 +28,21 @@ const projects = [
   {
     proj: [
       {
-        img: "/images/Kipepeo_Fashion.png",
-        name: "Kipepeo Fashion House",
-        link: "https://www.figma.com/proto/dHobEDOXPRz7jmhbN3A3O1/Kipepeo-Fashion-House-Website?node-id=1-2&node-type=frame&t=YkbjOTz3dmHtst3R-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+        img: "/images/Mboga.png",
+        name: "Mboga E-commerce Design",
+        link: "https://www.figma.com/proto/c9hSedHearoNkEp0vPhtvR/Mboga?node-id=2049-13&t=avHqbOZ0BoogsIW3-1&scaling=scale-down&content-scaling=fixed&page-id=12%3A2",
+      }
+    ],
+  },
+
+  {
+    proj: [
+      {
+        img: "/images/Medical_Supplier.png",
+        name: "Medical Supply Usage Forecast",
+        link: "https://medical-supply-usage-forecast.vercel.app/",
       },
+      
     ],
   },
 
@@ -39,18 +50,8 @@ const projects = [
     proj: [
       {
         img: "/images/timezone.png",
-        name: "Word Timezone",
+        name: "World Timezone",
         link: "https://world-timezone.vercel.app/",
-      },
-    ],
-  },
-
-  {
-    proj: [
-      {
-        img: "/images/Kaya_Kanri.png",
-        name: "Kaya Kanri",
-        link: "https://www.figma.com/proto/XnnrzKG8qSCGyUtnGk6zDC/Kaya?node-id=1-2&node-type=frame&t=A7iQwpaL7HxPr0D0-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1",
       },
     ],
   },

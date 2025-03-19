@@ -1,10 +1,57 @@
+"use client";
+
 import { Afacad } from "next/font/google";
+import { useState, useEffect } from 'react';
+import Popup from '../Popup';
 
 const afacad = Afacad({
   subsets: ["latin"],
 });
 
 const Contacts = () => {
+  const [fullname, setFullname] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullname, email, message }),
+      });
+
+      const data = await response.json();
+      setStatus(data.message);
+      if (data.message === 'Email sent successfully') {
+        setFullname('');
+        setEmail('');
+        setMessage('');
+      }
+      setShowPopup(true);
+    } catch (error) {
+      console.error(error);
+      setStatus('Failed to send email');
+      setShowPopup(true);
+    }
+  };
+
+  useEffect(() => {
+    if (status) {
+      setShowPopup(true);
+    }
+  }, [status]);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    setStatus('');
+  };
+
   return (
     <div
       id="contacts"
@@ -24,12 +71,14 @@ const Contacts = () => {
           <p>+250 786230026</p>
         </div>
 
-        <div className="text-xl md:text-2xl">
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <h3 className="font-semibold">Fullname</h3>
             <input
               type="text"
               name="fullname"
+              value={fullname}
+              onChange={(e) => setFullname(e.target.value)}
               className="w-full text-black px-2 py-1 rounded-lg"
             />
           </div>
@@ -38,6 +87,8 @@ const Contacts = () => {
             <input
               type="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full text-black px-2 py-1 rounded-lg"
             />
           </div>
@@ -46,14 +97,23 @@ const Contacts = () => {
             <textarea
               name="message"
               rows={3}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full text-black px-2 py-1 rounded-lg mb-2"
             ></textarea>
-            <button className="border rounded-xl font-semibold px-8 py-2 hover:text-[#cf871b] hover:bg-white transition duration-300">
+            <button
+              type="submit"
+              className="border rounded-xl font-semibold px-8 py-2 hover:text-[#cf871b] hover:bg-white transition duration-300"
+            >
               Send
             </button>
           </div>
-        </div>
+        </form>
       </div>
+
+      {showPopup && (
+        <Popup message={status} onClose={handleClosePopup} />
+      )}
 
       <div className="border-t border-white pt-4">
         <p className="text-center text-lg">

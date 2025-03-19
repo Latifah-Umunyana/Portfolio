@@ -80,7 +80,7 @@ const Homepage = () => {
           </div>
 
           <a
-            href="/images/Latifa Umunyana CV.pdf"
+            href="/images/Latifa_Umunyana_CV.pdf"
             download="Latifa_Umunyana_CV.pdf"
             className="inline-block"
           >
