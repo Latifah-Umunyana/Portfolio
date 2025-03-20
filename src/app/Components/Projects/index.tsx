@@ -62,7 +62,7 @@ const projects = [
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <div className="aspect-w-4 aspect-h-3">
-      <a href={project.link} className="text-blue-600 hover:underline">
+      <a href={project.link} target="_blank" className="text-blue-600 hover:underline">
         <Image
           src={project.img}
           alt={project.name}
