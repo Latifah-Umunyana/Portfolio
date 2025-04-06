@@ -20,9 +20,9 @@ const projects = [
   {
     proj: [
       {
-        img: "/images/ThemisAI.png",
+        img: "/images/themis-ai.png",
         name: "Themis AI",
-        link: "https://themis-dashboard-one.vercel.app/",
+        link: "https://drive.google.com/drive/folders/1Q15VpJT-iROo5zri-8GQLRwtxRtZsj4X",
       },
     ],
   },
@@ -30,9 +30,9 @@ const projects = [
   {
     proj: [
       {
-        img: "/images/Mboga.png",
-        name: "Mboga E-commerce Design",
-        link: "https://www.figma.com/proto/c9hSedHearoNkEp0vPhtvR/Mboga?node-id=2049-13&t=avHqbOZ0BoogsIW3-1&scaling=scale-down&content-scaling=fixed&page-id=12%3A2",
+        img: "/images/weather-forecast.png",
+        name: "Panga Meteo",
+        link: "https://weather-forecast-nu-rose.vercel.app/",
       }
     ],
   },
@@ -40,9 +40,9 @@ const projects = [
   {
     proj: [
       {
-        img: "/images/Medical_Supplier.png",
-        name: "Medical Supply Usage Forecast",
-        link: "https://medical-supply-usage-forecast.vercel.app/",
+       img: "/images/mboga.png",
+        name: "Mboga E-commerce Design",
+        link: "https://www.figma.com/proto/c9hSedHearoNkEp0vPhtvR/Mboga?node-id=2049-13&t=avHqbOZ0BoogsIW3-1&scaling=scale-down&content-scaling=fixed&page-id=12%3A2",
       },
       
     ],
@@ -62,7 +62,7 @@ const projects = [
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="bg-white rounded-lg shadow-md overflow-hidden">
     <div className="aspect-w-4 aspect-h-3">
-      <a href={project.link} className="text-blue-600 hover:underline">
+      <a href={project.link} target="_blank" className="text-blue-600 hover:underline">
         <Image
           src={project.img}
           alt={project.name}

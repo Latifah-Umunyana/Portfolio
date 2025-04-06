@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Latifa Umunyana Portfolio",
   description: "As a Software Developer actively seeking opportunities in the tech industry, this is my personal website that showcases my latest projects, technical skills, and professional journey.",
+  icons: {
+    icon: '/favicon.png'
+  },
 };
 
 export default function RootLayout({
