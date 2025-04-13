@@ -40,7 +40,7 @@ const projects = [
   {
     proj: [
       {
-       img: "/images/mboga.png",
+       img: "/images/Mboga.png",
         name: "Mboga E-commerce Design",
         link: "https://www.figma.com/proto/c9hSedHearoNkEp0vPhtvR/Mboga?node-id=2049-13&t=avHqbOZ0BoogsIW3-1&scaling=scale-down&content-scaling=fixed&page-id=12%3A2",
       },
